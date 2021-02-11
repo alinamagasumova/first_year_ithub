@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+.items {
+    /* max-height: 100px; */
+    min-height: 20px;
+    border: 1px solid;
+}
+.container {
+    display: grid;
+    /* Задание столбцов внутри сетки grid-template-columns: 200px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 600px;
+    padding: 50px;
+    /* column-gap: 50px; расстояние между столбцами */
+    /* row-gap: 20px; расстояние между строками */
+    gap: 20px 50px; /* вертикаль горизонталь */
+}
+.items2 {
+    background-color: #666;
+    grid-column-start: 1; /* у какой линии начнется элемент внутри сетки (ось х) */
+    grid-column-end: 4; /* у какой линии закончится элемент внутри сетки (ось х) */
+    grid-row-start: 2; /* у какой линии начнется элемент внутри сетки (ось y) */
+    grid-row-end: 2; /* сколько строк займет элемент */
+}

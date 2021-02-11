@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {font-family: Arial; margin: 0;}
+
+        .tab {
+        display: flex;
+        justify-content: center;
+        }
+
+        .tab button {
+        background-color: inherit;
+        border: 1px solid grey;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        }
+
+        .tab button:hover {
+        background-color: #e9e9f0;
+        }
+
+        .tab button.active {
+        border-radius: 10px;
+        background-color: rgb(109, 132, 191);
+        border: 0.5px solid rgb(31, 48, 116);
+        }
+
+        .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid rgb(22,22,22);
+        border-top: none;
+        }
+        
+
+        .additional { display: flex; justify-content: space-between; margin: 30px 0;} .additional img { height: 180px; width: 245px; box-shadow: 0 0 10px 2px rgb(22,22,22, 0.4);} .additional h3 { width: 245px; text-align: center; font-size: 16px; margin: 15px 0;} .mainPart img { height: 350px; box-shadow: 0 0 10px 2px rgb(22,22,22, 0.4); width: 508.75px; margin-right: 18.75px;} .mainPart {display: flex; margin-top: 30px;}
+    </style>
+</head>
+<body>
+<div class="tab">
+  <button class="tablinks" id="defaultOpen" onclick="openSeason(event, 'Winter')">Зимой</button>
+  <button class="tablinks" id="summer" onclick="openSeason(event, 'Summer')">Летом</button>
+</div>
+
+<div id="Winter" class="tabcontent">
+  <div class="mainPart">
+    <img src="https://rosakhutor.com/upload/iblock/326/326133caa301a38af06c89ce3214c444.jpg" alt="ride">
+    <div class="text">
+    <h3>Покататься на лыжах или сноуборде</h3>
+    <p></p>
+    <p>Не умеете кататься? Тогда приходите в горнолыжную школу Роза Хутор!</p>
+    </div>
+</div>
+<div class="additional">
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/b7a/b7a20b70297875292ca2699c3c4118f2.jpg" alt="rodelban">
+            <h3>Прокатиться на родельбане</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/77e/77eb8a0cff2aaeb9ecf84716235718ea.jpg" alt="качели">
+            <h3>Испытать острые ощущения на качелях над облаками</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/4e5/4e59df17abb19856b8e53036e3583144.jpg" alt="khaski">
+            <h3>Навестить хаски в Хаски Хутор</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/6e5/6e506df02caf2c58439898d0e37a54a4.JPG" alt="masterskaya">
+            <h3>Попробовать гончарное мастерство</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/7a6/7a6f7693298c436e3ffc3c398d32b5d8.jpg" alt="park">
+            <h3>Посетить интерактивный парк-музей «Моя Россия»</h3>
+        </div>
+</div>
+</div>
+
+<div id="Summer" class="tabcontent">
+    <div class="mainPart">
+        <img src="https://rosakhutor.com/upload/resize_cache/iblock/1ce/0_400_0/1ce2b6ef24ea90b80fdceb492c7f9017.jpg" alt="smotrovaya">
+        <div class="text">
+        <h3>Подняться на смотровую площадку на 2320 м</h3>
+        <p> Самая высокая смотровая площадка(2320м) в Сочи с панорамным обзором на 360 градусов!
+            Подъем на Роза Пик — это 40 минут и 6 км воздушного путешествия на 3 канатных дорогах.
+        </p>
+        </div>
+    </div>
+    <div class="additional">
+        <div >
+            <img src="https://www.yuga.ru/media/05/66/vvk_7728__gfngdsf.jpg" alt="водопады">
+            <h3>Погулять в парке водопадов «Менделиха» </h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/cdd/cdd4822928e77381f493cd35bd7fe57b.jpg" alt="этно-хутор">
+            <h3>Посетить этно-хутор «Шишин двор» </h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/af9/af93cb43058c36d72669580ce4dd6377.jpg" alt="электро-велосипеды">
+            <h3>Поехать в тур на электровелосипедах</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/805/805eb253ac28b37dfa8d2eba74ea4b21.jpg" alt="йога">
+            <h3>Заняться йогой</h3>
+        </div>
+        <div >
+            <img src="https://rosakhutor.com/upload/iblock/08b/08bc71520819a929fd0417fc24fae5b2.jpg" alt="park">
+            <h3>Посоревноваться в картинге</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("defaultOpen").click();
+function openSeason(evt, seasonName) {
+    var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(seasonName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>

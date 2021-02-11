@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>h1 { text-align: center;}</style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        // console.log('Hello here!');   
+        // alert('Aaaa!!!'); 
+        // let name = prompt('Введите ваше имя:', 'Гость');
+        // alert('Привет ' + name + '!');
+
+        if (confirm('Если хотите узнать, что вам следует посмотреть, нажмите ОК')) {
+            let age = prompt('Сколько вам лет?');
+            console.log(age);
+            if (age < 10 && age > 0) {
+                console.log('Фиксики');
+            } else if (age >= 10 && age < 15) {
+                console.log('Сплетница');
+            } else if (age>=15 && age<25) {
+                console.log('Игра престолов');
+            } else if (age >= 25) {
+                console.log('Мухтар');
+            } else if (age === '') {
+                console.log('Возраст не введен');
+            } else if (!age) {
+                console.log('Отменено');
+            } else {
+                console.log('Ввели неверно');
+            }
+        } else {
+        console.log('Ну и не надо');
+        }
+    </script>
+</body>
+</html>

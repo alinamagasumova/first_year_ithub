@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    fieldset {
+        margin: 8px;
+        border-color: hotpink;
+    }
+    .submit {
+        text-align: right;
+        margin-right: 8px;
+    }
+    textarea {
+        width: max-content;
+        height: 100px;
+        color: rgba(255, 105, 180, 0.515);
+        margin: 8px;
+    }
+</style>
+<body>
+    <h1>Закажите суши</h1>
+    <!-- action - way to server -->
+<form action="" method="POST">
+    <fieldset>
+        <legend>Ваши данные:</legend>
+    <table>
+        <tr>
+            <td>
+            Введите ваше имя: 
+            </td>
+            <td><input type="text" name="Name"></td>
+        </tr>
+        <tr>
+            <td>
+            Введите город доставки:    
+            </td>
+            <td>
+                <select name="City">
+                    <option>Москва</option>
+                    <option>Красногорск</option>
+                    <option>Химки</option>
+                    <option>Долгопрудное</option>
+                    <option selected>Балашиха</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+             Введите ваш номер телефона:    
+            </td>
+            <td><input type="tel" name="Phone"></td>
+        </tr>
+   </table>
+</fieldset>
+    <fieldset>
+        <legend>Способ оплаты: </legend> <label for="pay_card">Картой</label> <label><input type="radio" name="Pay" value="Картой" id="pay_card"></label> <label> Наличными <input type="radio" name="Pay" value="Наличными" checked></label>
+    </fieldset>
+    <fieldset>
+        <legend>Выберите блюдо:</legend>
+        <label><input type="checkbox" name="dish_1" value="Мисо-суп">
+        Мисо-суп </label> <br>
+        <label><input type="checkbox" name="dish_2" value="Том-ям">
+        Том-ям</label> <br>
+        <label><input type="checkbox" name="dish_3" value="Калифорния">
+        Калифорния</label> <br>
+        <label><input type="checkbox" name="dish_3" value="Фунчоза">
+        Фунчоза</label> <br>
+    </fieldset>
+   <fieldset> 
+        <legend>Выберите бонус! </legend>
+        <p>Капа Маки <input type="radio" name="bonus" value="Капа Маки" ></p> 
+        <p>Драгон Маки <input type="radio" name="bonus" value="Драгон Маки"></p> 
+        <p>Филадельфия <input type="radio" name="bonus" value="Филадельфия"></p>
+    </fieldset>
+    <textarea name="comment" placeholder="Введите ваш комментарий"></textarea>
+   <p class="submit"><input type="submit" value="Подтвердить"></p>
+</form>
+   <!-- input types:
+        text
+        tel
+        email
+        password
+        Новые не работают:
+        number
+        date
+        week
+        color
+        range
+        Кнопки:
+        button
+        submit 
+        reset
+        img-->
+        
+</body>
+</html>

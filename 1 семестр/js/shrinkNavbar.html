@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shrink navbar</title>
+    <style>
+    body {
+        margin: 0;
+        color: rgb(22,22,22);
+        height: 500vh;
+    }
+
+    #navbar { width: 100vw; background-color: bisque; margin: auto; padding: 0 calc(50% - 650px); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; height: 90px; position: fixed; z-index: 99; top: 0; transition: 0.5s; } .first ul { margin: 0; padding: 0; list-style-type: none; display: flex; justify-content: space-around;} .first li { text-align: center; font-size: 18px; margin-left: 60px;} h1 { transition: 0.4s; font-size: 30px; text-transform: uppercase;} 
+    header a { text-decoration: none; color: rgb(22, 22, 22);} header a:hover { text-decoration: underline;}  
+
+    </style>
+</head>
+<body>
+
+    <div class="first">
+    <header id="navbar">
+        <h1 id="logo">Роза Хутор</h1>
+        <ul class="menu" id="navbar-right">
+            <li><a href="#kurort" class="head_active">О курорте</a></li>
+            <li><a href="#activities">Чем заняться?</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </header>
+    </div>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    document.getElementById("navbar").style.height = "40px";
+    document.getElementById("logo").style.fontSize = "20px";
+  } else {
+    document.getElementById("navbar").style.height = "85px";
+    document.getElementById("logo").style.fontSize = "30px";
+  }
+}
+</script>
+</body>
+</html>

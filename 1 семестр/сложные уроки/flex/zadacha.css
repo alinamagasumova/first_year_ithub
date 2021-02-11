@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    font: 15px sans-serif
+}
+header {
+    background: rgb(146, 45, 146);
+    height: 50px;
+    width: 500px;
+    margin-bottom: 2px;
+    line-height: 3;
+}
+nav {
+    background: rgb(116, 143, 90);
+    height: 30px;
+    width: 500px;
+    line-height: 2;
+}
+main {
+    margin: 2px 0;
+    width: 500px;
+    height: 250px;
+    display: flex;
+}
+.main {
+    background: rgb(115, 98, 177);
+    width: 350px;
+
+}
+.aside {
+    background: rgb(64, 120, 130);
+    margin-left: 2px;
+    width: 148px;
+}
+footer {
+    background: rgb(146, 45, 146);
+    height: 50px;
+    width: 500px;
+    line-height: 3;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Трансформация</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .outer {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .inner {
+            width: 400px;
+            height: 400px;
+            border: 1px solid goldenrod;
+            position: absolute;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dynamic {
+            background-color: goldenrod;
+            /* transform: translate(20px, 30px); (сдвиг по оси х, по оси у) */
+            /* transform: translate(50px, 50px) rotate(45deg); */
+            /* transform: skew(10deg, 0); искажение */
+            transform: scale(-0.8 ,0.8); /* scale(1,1) - автоматическое. -1, 1 зеркально. так же масштабирование */
+            transform-style: preserve-3d;
+            animation: moveCube 8s 5s linear infinite;
+        }
+        .dynamic i {
+            transition-duration: 1s; /* сколько длится анимация */
+            transition-delay: 300ms; /* задержка по времени */
+            transition-property: transform, color, text-shadow;  /* то, что изменяется при анимации (динамично) */
+            /* transition-timing-function: cubic-bezier(.38,.77,.76,.85); */ 
+        }
+        .dynamic i:hover {
+            transform: scale(2, 2);
+            text-shadow: 1px 2px 5px rgb(33, 31, 31);
+            color: rgb(85, 55, 0);
+        }
+        .side {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .top {
+            background-color: rgba(85, 55, 0, .4);
+            transform: translateY(-50%) rotateX(90deg);
+        }
+        .bottom {
+            background-color: rgba(192, 115, 0, 0.4);
+            transform: translateY(50%) rotateX(90deg);
+        }
+        .left {
+            background-color: rgba(0, 13, 85, 0.4);
+            transform: translateX(-50%) rotateY(90deg);
+        }
+        .right {
+            background-color: rgba(10, 0, 199, 0.4);
+            transform: translateX(50%) rotateY(90deg);
+        }
+        .front {
+            background-color: rgba(85, 0, 0, 0.4);
+            transform: translateZ(50%);
+        }
+        .back {
+            background-color: rgba(197, 0, 0, 0.4);
+            transform: translateZ(-50%);
+        }
+        /* .dynamic:hover {
+            transform: scale(-0.8, 0.8) rotate3d(1,2,1, 360deg);
+            transition: transform 10s linear;
+        } */
+        @keyframes moveCube {
+            50% {
+                transform: scale(-0.8, 0.8) rotate3d(1,1,2, 360deg); 
+            }
+            100% {
+                transform: scale(-0.8, 0.8) rotate3d(2,2,1, 360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+    <div class="inner static"></div>
+    <div class="inner dynamic">
+        <i class="fas fa-bug fa-7x"></i>        
+        <div class="side top"></div>
+        <div class="side bottom"></div>
+        <div class="side left"></div>
+        <div class="side right"></div>
+        <div class="side front"></div>
+        <div class="side back"></div>
+    </div>
+    </div>
+</body>
+</html>

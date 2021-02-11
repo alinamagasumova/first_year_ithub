@@ -1,0 +1,31 @@
+RGB
+red    green  blue
+0-255  0-255  0-255
+255    0      0       red
+0      0      255     blue
+0      255    0       lime
+0      128    0       green
+255    255    255     white
+0      0      0       black
+128    128    128     gray/grey (the best 20  20  20)
+
+0      255    255     aqua/cyan
+255    0      255     magenta
+255    255    0       yellow
+255    128    0       orange
+
+CMYK (для цветных принтеров)
+
+HEX-16иричная система исчесления
+RGB=HEX
+0   00
+255 ff
+
+red = rgb(255, 0, 0) = #ff0000
+
+#66aa88 => #6a8
+#222 = #222222 = rgb(34, 34, 34)
+
+
+https://htmlcolorcodes.com
+https://color.adobe.com

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            /* text-align: center;
+            font: 15px sans-serif */
+        }
+        .wrapper {
+        width: 800px;
+        height: 100vh;
+        margin: auto;
+        }
+        header {
+        background: rgb(146, 45, 146);
+        height: 100px;
+        }
+        nav {
+        background: rgb(116, 143, 90);
+        height: 50px;
+        }
+        .outer {
+        height: calc(100% - 230px);
+        display: flex;
+        justify-content: space-between;
+        }
+        main {
+        background: rgb(115, 98, 177);
+        width: calc(100% - 320px);
+        }
+        aside {
+        background: rgb(64, 120, 130);
+        width: 150px;
+        }
+        footer {
+        background: rgb(146, 45, 146);
+        height: 50px;
+        }
+        .mb {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header class="mb">Это шапка сайта</header>
+    <nav class="mb">Это навигационная панель</nav>
+    <div class="outer mb">
+        <aside>
+            Боковая панель 
+        </aside>
+        <main>
+            Тут будет находиться основной контент сайта
+        </main>
+        <aside>
+            Боковая панель
+        </aside>
+    </div>
+    <footer>Это подвал сайта</footer>
+</div>
+</body>
+</html>

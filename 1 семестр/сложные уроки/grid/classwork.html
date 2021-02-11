@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(8, calc((100vh - 180px) / 8));
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box2{
+            grid-column: 2 / span 4;
+        }
+        .box6 {
+            grid-column: 1 / span 6;    
+        }
+        .box4, .box5 {
+            grid-row: span 3;
+            grid-column: span 3;
+        }
+        .box7, .box8, .box9 {
+            grid-row: span 3;
+            grid-column: span 2;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">Portfolio</div>
+        <div class="box box2"></div>
+        <div class="box box3"><form action="" method="POST"><input class='input' type="submit" value="Something"></form></div>
+        <div class="box box4">Hello, my name Ghaist Hatta <br> I'm a UI/UX Designer.</div>
+        <div class="box box5"></div>
+        <div class="box box6">Explore. Think. Create.</div>
+        <div class="box box7">Web Design <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde omnis necessitatibus dignissimos praesentium? Libero cum nihil itaque consequatur!</p></div>
+        <div class="box box8">UI/UX Design <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam distinctio in incidunt quis tempore veniam, voluptate consequatur impedit.</p></div>
+        <div class="box box9">Creative Designer<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit possimus amet alias, debitis corporis aut cupiditate cumque est.</p></div>
+    </div>
+</body>
+</html>

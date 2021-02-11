@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p id="main" style="position: absolute;">Нажми на меня!</p>
+    <p id="zero">Заново!</p>
+    </div>
+    <script>
+        var click_count = 1;
+        main.onclick = function() 
+        {
+            main.style.top = 1000 * Math.random()
+            main.style.left = 300 * Math.random()
+            main.innerText = "На меня нажали " + click_count + " раз"
+            //main.style.color = "red"
+            click_count ++
+        }
+
+        zero.onclick = function() 
+        {
+            main.innerText = "Нажми на меня! " 
+            click_count = 1
+            main.style.top = 8
+            main.style.left = 8
+        }
+           // main.innerText = "Hello world!" //изменяет текст дива
+    </script>
+</body>
+</html>

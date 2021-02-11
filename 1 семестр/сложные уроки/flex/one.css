@@ -1,0 +1,43 @@
+.card {
+    width: 100px;
+    height: 150px;
+    background: rgb(126, 92, 143);
+    border: 1px solid;
+    border-radius: 8px;
+    font: 100px /1.5 sans-serif;
+    text-align: center;
+    margin: 5px;
+}
+.container {
+    height: 500px;
+    background: #4b155a;
+    display: flex;
+    /* 
+        flex-direction
+        Направление основной оси:
+        row - с лева на право
+        row-reverse - с права на лево
+        column - с верху вниз
+        column-reverse - с низу вверх
+     */
+     justify-content: space-around;
+     /* 
+        justify-content
+        Расположение элементов вдоль основной оси:
+        flex-start - с начала оси
+        flex-end - c конца оси 
+        center - в центре
+        space-between - первый элемент находится в начале оси, последний в конце, между всеми равномерный отступ
+        space-around - отступ вокруг, вокруг каждого элемента
+    */
+    align-items: center;
+    /* 
+        align-items
+        Выравнивание вдоль поперечной оси (перпендикулярной)
+        stretch - растянуть по размеру родителя (если у флекс-элемента нет высоты!)
+        flex-start - с начала оси
+        flex-end - c конца оси 
+        center - в центре
+        baseline - выравнивает элементы по нижнему краю контента
+    */
+}

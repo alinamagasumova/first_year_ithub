@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    background-color: rgb(227, 217, 217);
+    height: 200vh;
+}
+p {
+    margin: 30px auto;
+    width: 700px;
+    text-align: justify;
+    font: 20px sans-serif;
+    color: rgb(33, 30, 28);
+    position: relative;
+    z-index: 2;
+    color: rgb(227, 217, 217);
+}
+/*  ::before (перед тегом) 
+    ::after (после тега) */
+
+p::before { /* Будет создавать псевдоэлемент с контентом перед всеми абзацами <p> */
+    content: 'Start: '; /* content - Обязательно у любого псевдоэлемента */
+    color:  saddlebrown;
+}
+p::after {
+    color:  saddlebrown;
+    /* content: attr(title); */
+    content: " End";
+}
+h1 {
+    text-align: center;
+    width: 700px;
+    margin: 30px auto;
+    color: saddlebrown;
+    font: 50px / 1 fantasy; /* лайн хейт 1.2 120% от шрифта */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: rgb(227, 217, 217);
+}
+h1::before, h1::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: rgb(216, 95, 81);
+}
+.daddy {
+    width: 700px;
+    margin: 0 auto 30px;
+    height: 500px;
+    background-color: rgb(216, 95, 81);
+    position: relative;
+}
+.child {
+    width: 100px;
+    height: 100px;
+    position: static; /* Есть у всех тегов в html */
+}
+.child1 {
+    background-color: saddlebrown;
+    position: fixed;
+    width: 700px;
+    top: calc(50% - 100px);
+    z-index: 1;
+    /* fixed - всегда располагается относительно границ вьюпорта */
+    /* absolute - абсолютное позиционирование относительно границ ближайшего родителя, у которого position отличен от static, если такого родителя нет, располагается относительно вьюпорта экрана, без сохранения своего статичного места */
+    /* relative - относительно своего местоположения с сохранением своего первоначального статичного положения*/
+    /* top || left || right || bottom сдвиг элемента*/
+    /* z-index - по умолчанию все теги с position != static имеют z-index = 0 */
+
+    /* top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    width: auto;
+    height: auto; */
+}
+.child2 {
+    background-color: sienna;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    height: auto;
+    width: 100px;
+}
+.child3 {
+    background-color: brown;
+    position: relative;
+    width: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+}

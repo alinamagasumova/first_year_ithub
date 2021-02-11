@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: underline; /* underline | overline | line-through | none */
+            color: inherit;
+        }
+        .box {
+            background: rgba(216, 157, 157, 0.829);
+            width: 300px; /* px, % (from parent-teg width), vw-viewport width */
+             /* height: better to use px, vh-viewport height 100vh, max/min-height*/
+            overflow: scroll; /* visible, hidden, scroll, auto */
+            /* border-width: 3px;
+            border-color: rgba(150, 20, 20, 0.747);
+            border-style: solid; 
+            border-right-style: dashed; */
+            /* стиль рамки: solid, dashed (пунктир), dotted, double */
+            border: solid 3px rgba(150, 20, 20, 0.747);
+            text-align: justify;
+            line-height: 1;
+            padding: 30px 125px ; /* внутренний отступ. порядок: top right bottom left | vertical horizontal | vertical horizontal bottom  */
+            margin: 30px auto; /* внешний отступ. порядок is the same as in the padding, auto to make block central (only horizontal) */
+        }
+        .menu {
+            width: 510px;
+            margin: 0 auto;
+            padding: 0; /* Чтобы не было отступа слева как у списка */
+            list-style-type: none; /* none disk circle square */
+            font-size: 0; /* !!!!! Чтобы не было пробелов между тегами ли !!!!!! */
+        }
+        .menu li /* для тегов ли внутри тегов с классом меню */ {
+            height: 50px;
+            width: calc(100% / 3 - 2px);
+            border: 1px solid;
+            font: 20px / 50px sans-serif; /* !!!!!! Важно, чтобы был размер текста, так как в меню размер 0 !!!!!! */
+            text-align: center;
+            display: inline-block; /* block | inline | inline-block */
+        }
+        .menu a {
+            background-color: rgba(75, 2, 2, 0.781);
+            display: block; /* чтобы кнопка была блоком */
+        }
+        .menu a:hover /* когда наводишь меняет цвет */ {
+            background: #fff;
+        }
+   </style> 
+</head>
+<body>
+    <!-- ul.menu>li*3>a{link $ -->
+    <ul class="menu">
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+    </ul>
+   <div class="box">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, neque. Facilis possimus numquam qui totam aliquid cupiditate quo nostrum quasi corporis veniam culpa perspiciatis itaque animi tenetur tempore, ut debitis atque commodi eius iusto beatae, ratione voluptatem assumenda. Et recusandae itaque maxime libero, reiciendis eos eum unde atque inventore vel alias earum molestiae delectus consectetur error veritatis omnis natus perspiciatis architecto, excepturi voluptatibus quis iure eius. Voluptas cum possimus cupiditate dolorem ad, molestias enim magnam, minus ratione suscipit dignissimos asperiores non quod mollitia atque veritatis!
+   </div>
+   <div class="box">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, neque. Facilis possimus numquam qui totam aliquid cupiditate quo nostrum quasi corporis veniam culpa perspiciatis itaque animi tenetur tempore, ut debitis atque commodi eius iusto beatae, ratione voluptatem assumenda. Et recusandae itaque maxime libero, reiciendis eos eum unde atque inventore vel alias earum molestiae delectus consectetur error veritatis omnis natus perspiciatis architecto, excepturi voluptatibus quis iure eius. Voluptas cum possimus cupiditate dolorem ad, molestias enim magnam, minus ratione suscipit dignissimos asperiores non quod mollitia atque veritatis!
+   </div>
+</body>
+</html>

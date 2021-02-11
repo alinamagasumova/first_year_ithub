@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow();">Open new window</button>
+    <button onclick="closeWindow();">Close that window</button>
+    <button onclick="changeColor();">Change color</button>
+    <script>
+        let w;
+        let wWidth = Math.round(screen.width/4);
+        let wHeight = Math.round(screen.height/2);
+        let wTop = (screen.height - wHeight) / 2;
+        let wLeft = (screen.width - wWidth) / 2;
+        function openWindow() {
+            w = window.open("", "", `width=${wWidth}, height=${wHeight}, top=${wTop}, left=${wLeft}`);
+            w.document.body.style.backgroundColor = getRGB();
+        }
+        function closeWindow() {
+            w.close();
+        }
+        // w.resizeTo(x,y) - задает новые ширину и высоту
+        // w.resizeBy(x,y) - изменение размеров путем сложения с новыми числами (увеличить на ...)
+        // w.moveTo(x,y) - изменить положение
+        // w.moveBy(x,y) - сдвинуть на ...
+        function getNumber(max = 10, min = 0) {
+            return Math.floor(Math.random() * (max-min) + min);
+        }
+        function getRGB() {
+            return `rgb(${getNumber(256)}, ${getNumber(256)}, ${getNumber(256)})`;
+        }
+        // Создать кнопку, при нажатии на которую будет меняться цвет нового окошка
+        function changeColor() {
+            w.document.body.style.backgroundColor = getRGB();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ сайт</title>
+    <style>
+        textarea {
+            width: 600px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h1>Закажите сайт!</h1>
+<form action="" method="POST">
+    <table>
+        <tr>
+            <td>
+                Вас зовут:
+            </td>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ваш электронный адрес:
+            </td>
+            <td>
+                <input type="email" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Тип сайта
+            </td>
+            <td>
+                <select name="site">
+                    <option>Интернет-Магазин</option>
+                    <option>Визитка</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <fieldset>
+        <legend>Параметры заказа</legend>
+        <label><input type="checkbox" name="parametr1" value="mobile">Мобильная версия</label><br>
+        <label><input type="checkbox" name="parametr2" value="print">Версия для печати</label><br>
+        <label><input type="checkbox" name="parametr3" value="effects">Динамические эффекты</label><br>
+        <label><input type="checkbox" name="parametr4" value="personal">Личный кабинет пользователя</label>
+    </fieldset>
+    <fieldset>
+        <legend>Соответствие стандартам</legend>
+        <label><input type="radio" name="standart" value="H5">HTML 5</label><br>
+        <label><input type="radio" name="standart" value="H4.01">HTML 4.01 Strict</label><br>
+        <label><input type="radio" name="standart" value="X1.0">XHTML 1.0 Transitional</label>
+    </fieldset>
+    Примечания <br>
+    <textarea name="comment"></textarea><br>
+    <input type="submit" value="Заказать сайт!">
+</form>
+</body>
+</html>

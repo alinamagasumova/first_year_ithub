@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+    <script src="functions.js"></script>
+    <style>
+        h1 {
+            margin-bottom: 0;
+        }
+        table {
+            width: 149px;
+        }
+        td {
+            border: 1px solid;
+            text-align: center;
+        }
+        button {
+            height: 30px;
+            margin: 10px;
+            border: 0;
+            width: 145px;
+        }
+        .cont {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <!-- make page that generates random number and writes it in a table -->
+    <div class="cont">
+    <h1>Randomizer from 1 to 100</h1>
+    <button onclick="setNumber()"> Need a random number?</button>
+    <table>
+        <tbody></tbody>
+    </table>
+    </div>
+    <div style = "display:flex;justify-content:center;"></div>
+    <script>
+        let tbl = document.body.firstElementChild.lastElementChild.firstElementChild;
+        const setNumber = function() {
+            document.body.firstElementChild.firstElementChild.nextElementSibling.style.backgroundColor = getRGB();
+            document.body.firstElementChild.firstElementChild.nextElementSibling.style.color = "whitesmoke";
+            let number = getNumber(100, 1);
+            let rowsCount = tbl.childNodes.length;
+            let row = tbl.childNodes[rowsCount - 1];
+            if (rowsCount>0) {
+                if (row.childNodes.length<4) {
+                    row.innerHTML += `<tr><td>${number}</td></tr>`;
+                } else {
+                    tbl.innerHTML += `<tr><td>${number}</td></tr>`;        
+                }
+            } else {
+                tbl.innerHTML = `<tr><td>${number}</td></tr>`;
+                document.body.lastElementChild.previousElementSibling.innerHTML += `<button onclick="sumUp()" style = "width:145px;">Sum it up!</button>`;      
+            }
+        };
+        const sumUp = function() {
+            let rowing; let what = 0; let index; let g = 0;
+            let no = 0;
+            for (let i = 0; i<tbl.childNodes.length; i++) {
+                rowing = tbl.childNodes[i]; // каждая тр
+                index = rowing.childNodes.length; // сколько всего тд в тр
+                    for (g=0; g < index; g++) {
+                    what += (+rowing.childNodes[g].innerText);
+                }
+            }
+            document.body.lastElementChild.previousElementSibling.firstElementChild.innerText = "Sum = " + what;
+            document.body.lastElementChild.previousElementSibling.firstElementChild.style.color = "whitesmoke";
+            document.body.lastElementChild.previousElementSibling.firstElementChild.style.backgroundColor =  document.body.firstElementChild.firstElementChild.nextElementSibling.style.backgroundColor;
+        }
+    </script>
+</body>
+</html>

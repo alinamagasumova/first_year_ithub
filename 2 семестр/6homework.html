@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework visitka</title>
+</head>
+<body>
+
+
+    <script>
+
+        let div = document.body.appendChild(document.createElement('div'));
+        let firstDiv = div.appendChild(document.createElement('div'));
+        let secondDiv = div.appendChild(document.createElement('div'));
+
+        firstDiv.innerHTML = '<h1 style="margin:0;">Alina Magasumova</h1><p style="margin:0;">Petite Web</p>';
+        secondDiv.innerHTML = '<p style="margin:0;">phone: +7(985)138-33-78</p><p style="margin:0;">admin@petiteweb.ru / https://petite.web.ru</p>';
+
+        //STYLE
+        firstDiv.style.marginBottom = '40px';
+        div.style.fontFamily = 'sans-serif';
+        div.style.fontWeight = '600';
+        div.style.textAlign = 'center';
+        div.style.height = '300px';
+        div.style.width = '550px';
+        div.style.backgroundColor = 'burlywood';
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.justifyContent = 'center';
+        div.style.alignItems = 'center';
+    </script>
+</body>
+</html>

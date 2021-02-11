@@ -1,0 +1,31 @@
+
+/* BASE */
+body {margin: 0;max-width: 100vh;max-height: 100vh;background-color: #c5c5c5; font-family: sans-serif;} .wrapper {padding: 20px 60px;display: grid;grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, auto);gap: 30px;} .box{background-color: #fffcfc; height: calc((100vh - 70px) / 2);width: calc((100vw - 210px) / 4);position: relative;padding: 20px 15px;box-sizing: border-box;font-size: 9px;} .page{position: absolute;bottom: 15px;right: 20px;color: gray;font-size: 7px;margin: 0;text-align: right;}
+
+/* COMMON */
+.wid1{width: 55%;} .wid{width: 45%;} .wid2{width: 70%;} p{color: rgb(148, 144, 144);font-size: 7px;} h2 {text-transform: uppercase;font-weight: 600;letter-spacing: 1px;font-size: 18px;margin-top: 3px;margin-bottom: 3px;line-height: 1;} .bigger{font-size: 10px;}p,h3{margin-top: 3px;margin-bottom: 3px;line-height: 1.4;} h3{font-size: 8px;} .m15{margin-bottom: 15px;} .leftpos{left: 15px;position: relative;margin-right: 30px;} .string::before{content: '';height: 80px;width: 1px;background-color: gray;position: absolute;left: -15px;}
+
+/* BOX 1 */
+.box1 h2{margin-bottom: 20px;} .watches{height: 120px;position: absolute;left: calc(50% - 30px);margin: 15px 0;} .gray{background-color: rgb(160, 172, 187);display: flex;align-items: center;justify-content: space-between;padding: 0 65px;position: absolute;bottom: 40px;right: 30px;left: 30px;height: 50px;} .box1 i{font-size: 25px;} .watchp::before{content: "";position: absolute;left: 132px;top: 155px;z-index: 1;background-image: url(https://i.ytimg.com/vi/JQl4ehjqp9Q/maxresdefault_live.jpg);background-size: cover;border-radius: 10px;height: 58px;width: 48px;background-color: lightslategray;} 
+
+/* BOX 2 */
+.box2 i{font-size: 28px;margin: 5px;}.box2 h2{margin-bottom: 60px;} .box2>p{margin-bottom: 30px;} .box2 ul{display: flex;list-style-type: none;justify-content: space-between;padding: 0;width: calc(100% - 30px);margin-left: 15px;} .li2{display: flex;align-items: center;flex-direction: column;text-align: center;} 
+
+/* BOX 3 */
+.design{background-color: rgb(149, 154, 176);background: url(https://st3.depositphotos.com/1024166/15240/i/950/depositphotos_152400330-stock-photo-abstract-architecture-design-white-modern.jpg) no-repeat top/cover;padding: 18px 0 30px 15px;box-sizing: border-box;} .black{background-color: rgb(27, 26, 26);color: rgb(237, 232, 232);margin-top: 13px;padding: 15px;}
+
+/* BOX 4 */
+.up {display: flex;height: 30%;justify-content: space-between;} .down{display: flex;height: 70%;justify-content: space-between;} .daddy {width:50%;} .txt{margin-top: 30px;margin-right: 25px;} .wall{height: 126.35px;width: 154px;position: relative;top: -20px;right: -15px;} .picture{height: 234.65px;width: 154px;position: relative;left: -15px;bottom: -10.4px;}
+
+/* BOX 5 */
+.comp {background-color: rgb(202, 202, 202);display: flex;justify-content: center;height: 150px;padding-top: 20px;box-sizing: border-box;margin-top: 20px;margin-bottom: 20px;
+} .notebook {height: 130px;} .note::before {content: ""; background-image: url(https://st2.depositphotos.com/3336339/11930/i/950/depositphotos_119303608-stock-photo-abstract-architecture-construction.jpg); background-size: cover;background-color: moccasin;width: 140px; height: 88px;position: absolute;left: 83px;top: 153px;z-index: 1;} 
+
+/* BOX 6 */
+.box6 .many {margin-top: 30px; margin-bottom: 20px;} .phone {background-color: rgb(202, 202, 202);display: flex;justify-content: center;align-items: center;height: 125px;box-sizing: border-box;} .arch {height: 73px;width: 40px;position: relative;box-shadow: -3px 2px 5px 0 rgba(56, 56, 56, 0.741);} .arch1 {left: 28px;} .arch2 {right: 30px;} .iph {height: 120px;margin-top: 5px;}
+
+/* BOX 7 */
+.one{background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8c287c62584103.5a9540f0134d8.jpg);background-size: cover;display: flex;position: relative;top: -20px;left: -15px;height: 250px;width: 220px;} .work{margin-top: 20px;margin-left: 30px;} .card{background-color: rgb(167, 166, 166);height: 70px;width: 190px;position: absolute;right: 30px;top: 195px;padding: 12px;box-sizing: border-box;} .white{color: rgb(238, 238, 238);} .mt{margin-top: 15px;}
+
+/* BOX 8 */
+.what{background-image: url(https://im0-tub-ru.yandex.net/i?id=ad8a527a63709110b96d176c4a3e4f60&n=13);position: relative;top: -20px;left: -15px;display: flex;background-size: cover;height: 120px;width: 308px;} .box8 ul{padding: 0;margin-top: 0;list-style-type: none;} .box8 h2{margin-top: 20px;margin-left: 30px;} .box8 i{font-size: 15px;margin-bottom: 2px;} .space{padding: 4px 0;}

@@ -1,0 +1,45 @@
+/* Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%) 
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%) */
+
+body { margin: 0; font-family: "Spartan", sans-serif; font-size: 15px; font-weight: 400; height: 100vh; padding: 90px 60px 40px; box-sizing: border-box; line-height: 1.7;}
+
+.up { display: flex; height: 50%; justify-content: space-between;} 
+
+.back { position: absolute;} .bg1 { top: 0;} .bg2 { bottom: 0;}
+
+.stars { position: relative; display: flex; flex-direction: column;} .line {background-color: hsl(300, 24%, 96%); position: relative; display: flex; width: 430px; height: 35px; align-items: center; border-radius: 10px; margin: 10px 0; padding: 10px 30px;}
+.line img { margin: 0 3px;} .line p { margin-left: 20px; color: hsl(300, 43%, 22%); font-weight: 700; }
+.l1 { left: -80px;} .l2 { left: -40px;}
+
+.txt { width: 600px; color: hsl(303, 10%, 53%);} .users { font-weight: 700; color: hsl(300, 43%, 22%); font-size: 50px; margin: 0; line-height: 1;}
+
+.down { display: flex; position: relative; justify-content: space-between; height: 50%;}
+
+.box { background-color: hsl(300, 43%, 22%); border-radius: 10px; width: calc((100% - 50px) / 3); padding: 40px 35px 40px; box-sizing: border-box; height: 265px; position: relative;}
+
+.o1 { top: -40px;} .o2 { top: -20px;}
+
+.buyer { display: flex; margin-bottom: 25px; align-items: center;}
+.photo { border-radius: 50px; margin-right: 30px; width: 60px; height: 60px;} .name p { font-weight: 500; margin: 0;}
+.white { color: hsl(300, 24%, 96%); margin: 0;}
+.pink { color: hsl(333, 80%, 67%); font-weight: 400;}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (max-width:800px) {
+    body { display: flex; padding: 40px 20px; flex-direction: column; align-items: inherit; height: auto; width: auto; font-size: 13px;} .back { width: 100%;} .bg1 { top: 0; left: 0;} .bg2 { bottom: 0; right: 0; position: fixed;}
+    .up { flex-direction: column; text-align: center;} .down { flex-direction: column; margin-top: 20px;} .box { width: 100%; height: auto; margin: 10px 0;} .line { position: static; width: auto; flex-direction: column; height: auto;} .txt { width: auto; height: auto;} .users { font-size: 40px;} .line p { margin: 0;}
+  }
+
+  @media screen and (max-width:1300px) {
+    .line { position: static; width: auto;} .box { position: static; height: fit-content;}
+  }

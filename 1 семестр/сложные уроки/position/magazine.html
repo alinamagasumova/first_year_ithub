@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILBAO</title>
+    <style>
+        body {
+            margin: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            background-color: gray;
+            position: relative;
+        }
+        .mockup {
+            height: 250px;
+            width: 450px;
+            background-color: #fff;
+            overflow: hidden;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between; 
+            position: absolute;
+            z-index: -2;
+            top: calc(50% + 250px);
+            left: calc(50% - 450px);
+        }
+        h1 {
+            text-transform: uppercase;
+            font: 600 20px sans-serif;
+            color: darkblue;
+            position: relative;
+            left: 10px;
+        }
+        h1::before {
+            display: block;
+            content: "";
+            height: 125px;
+            width: 80px;
+            background-color: rgb(235, 170, 160);
+            position: absolute;
+            top: -35px;
+            left: -30px;
+            z-index: -1;
+        }
+        .right {
+            width: 55%;
+            font: 10px sans-serif;
+        }
+        .des {
+            color: darkblue;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+            font: 600 8px sans-serif;
+        }
+        .page {
+            color: darkblue;
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            font: 600 8px sans-serif;
+        }
+        li {
+            font-size: 8px;
+        }
+        img {
+            position: absolute;
+            height: 250px;
+            bottom: -40%;
+            left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mockup">
+    <img src=https://pngshare.com/wp-content/uploads/2020/06/iphone-x-hd-pic-10-1.png alt="phone pic">
+    <h1>phone <br> mockup</h1>
+    <p class="des">bilbao design</p>
+    <div class="right"> 
+    <ul>
+        <h2>App design for mobile</h2>
+        <li><h3>Lorem, ipsum dolor.</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, inventore maxime.</li>
+        <li><h3>Lorem, ipsum dolor.</h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, est asperiores.</li>
+        <li><h3>Lorem, ipsum dolor.</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, perspiciatis adipisci.</li>
+    </ul>
+    <p class="page">111</p>
+    </div>
+</div>
+</body>
+</html>

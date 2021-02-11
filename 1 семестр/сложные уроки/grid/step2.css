@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+.element {
+    background: #dedede;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px repeat(6, 100px);
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas: 'header header header header'
+                         'asideleft nav nav asideright'
+                         'asideleft main main asideright'
+                         'asideleft main main asideright'
+                         'asideleft main main asideright';
+}
+.element1 {
+    grid-area: header;
+    background-color: lightsalmon;
+}
+.element2 {
+    grid-area: nav;
+    background-color: lightblue;
+}
+.element3 {
+    grid-area: asideleft;
+    background-color: lightgreen;
+}
+.element4 {
+    grid-area: main;
+    background-color: lightpink;
+}
+.element5 {
+    grid-area: asideright;
+    background-color: lightseagreen;
+}

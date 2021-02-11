@@ -1,0 +1,33 @@
+green1 = greenyellow
+green2 = yellowgreen 
+dark = #222
+
+flex(v1, v2)
+    display flex
+    justify-content v1
+    align-items v2
+
+h1 
+    text-align center
+    color green1
+body
+    background dark
+    font 20px sans-serif
+    color green2
+    margin 0
+    padding 50px calc(50% - 600px)
+.cards
+    list-style none
+    margin 0
+    padding 0
+    flex(space-between, stretch)
+    li
+        border 1px solid green2 - #0008
+        border-radius 10px 
+.card 
+    width 25%
+    height 50px
+    display flex
+    flex(center,center)
+    &:hover
+        background dark + #333

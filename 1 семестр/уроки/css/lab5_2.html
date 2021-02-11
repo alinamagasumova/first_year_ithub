@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .site {
+            width: 1000px;
+            height: 100vh;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            height: 100px;
+            background: rgba(67, 44, 2, 0.857);
+            font-size: 16px;
+            line-height: 100px;
+        }
+        nav {
+            height: 50px;
+            background: rgba(10, 67, 2, 0.857);
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .content {
+            height: calc(100% - 230px);
+            margin: 10px 0;
+            font-size: 0;
+        }
+        main {
+            height: 100%;
+            width: calc(80% - 10px);
+            background: rgba(63, 5, 5, 0.658);
+            display: inline-block;
+            vertical-align: top; /* Использовать всегда, когда инлайн блок */
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        aside {
+            height: 100%;
+            width: 20%;
+            background: salmon;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+        }
+        footer {
+            height: 50px;
+            background: rgba(5, 43, 84, 0.857);
+            font-size: 16px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="site">
+    <header>Это шапка сайта</header>
+    <nav>Это навигационная панель</nav>
+    <div class="content">
+        <main>Тут будет находиться основной контент сайта</main>
+        <aside>Боковая панель</aside>
+    </div>  
+    <footer>Это подвал сайта</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let num = prompt('Введите число больше 100');
+        if (num>100) {
+            alert('Вы справились!')
+        } else {
+            alert('Попробуйте еще раз')
+            location.reload();
+        }
+
+        //2
+        let salary = {
+            Steave:150,
+            Jon: 160,
+            Alex: 220,
+            Sasha:330
+        }
+        let sum = 0;
+        for (let key in salary) {
+            sum += salary[key];
+        }
+        console.log(sum);
+
+        //3
+        let styles = ['Джаз','Блюз'];
+        styles.push('Рок-н-ролл');
+        console.log(styles.shift());
+        styles.unshift('Рэп', 'Регги');
+        // console.log(styles);
+
+        //4
+        console.log(undefined || null && 3 || 4)
+        // Выводит 4, т.к. при сравнении null && 3 (сначала идет сравнение &&, затем только ||), будет null (первое ложное значение), затем идет сравнение undefined || null || 4, выводит 4, т.к. это первое истинное значение
+
+        //5
+        let log = prompt('Enter your login');
+        if (log == 'admin' || log == 'Admin') {
+            let pass = prompt('Enter the password');
+            if (pass == 'i am the boss') {
+                alert('Welcome')
+            } else if (pass == null || pass == '') {
+                alert('Cancelled')
+            } else {
+                alert('the password is wrong')
+            }
+        } else if (log == null || log == '') {
+                alert('Cancelled')
+            } else {
+                alert('I do not know you')
+            }
+    </script>  
+</body>
+</html>

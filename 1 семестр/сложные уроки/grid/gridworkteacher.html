@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-template-rows: 70px calc(100vh - 130px);
+            gap: 20px;
+        }
+        header, nav, main {
+            box-shadow: 2px 1px 5px 2px rgb(0, 0, 0, .3);
+            /* background: #dedede; */
+            border-radius: 10px;
+        }
+        nav {
+            grid-row: 1 / span 2; /* 1 / 3 */
+            grid-column-start: 1;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main></main>
+</body>
+</html>

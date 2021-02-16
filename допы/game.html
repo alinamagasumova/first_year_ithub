@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Window</title>
+</head>
+<body>
+    <h1>Guess a number</h1>
+    <p>Open console!</p>
+    <button onclick="playGame(questNumber);">Start a game!</button>
+    <button onclick="startGame();">Open the number!</button>
+    <button onclick="endGame();">Close the number!</button>
+    <script>
+
+        const getNumber = function(max = 10, min = 0) {
+            return Math.ceil(Math.random()*(max-min)+min);
+        };
+        let questNumber = getNumber(100);
+
+        let w;
+        const startGame = function() {
+        w = window.open("", "", "width=10, height=10, top=50");
+        w.document.write(`${questNumber}`)
+        }
+
+        const endGame = function() {
+            w.close();
+        }
+
+        const playGame = function(quest, hint="") {
+            let answer = +prompt('Enter a number between 1 to 100', hint);
+            let b;
+            console.log('Entered number: ', answer);
+            if (answer) {
+                if (quest === answer) {
+                    alert('Well done! You guessed!');
+                    b = 'Well done! You guessed!'
+                    console.log(b);
+                } else if (Math.abs(quest-answer) <= 5) {
+                    alert('HOT! You are really close! (+-5)');
+                    b = 'HOT! You are really close! (+-5)';
+                    console.log(b);
+                    playGame(quest);
+                } else if (Math.abs(quest-answer) <= 10) {
+                    alert('WaRm! You are close! (+-10)');
+                    b = 'WaRm! You are close! (+-10)';
+                    console.log(b);
+                    playGame(quest);
+                } else {
+                    alert("Brrr.. it's cold. You are far");
+                    b = "Brrr.. it's cold. You are far";
+                    console.log(b);
+                    let help = confirm('Want a hint?');
+                    if (help) {
+                        let sign = quest > answer ? '>' : '<';
+                        playGame(quest, `${sign} ${answer}`);
+                    } else {
+                        playGame(quest);
+                    }
+                    playGame(quest);
+                }         
+            } else {
+                alert('You need to enter a NUMBER');
+            }
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business-card</title>
+    <script src="functions.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        h1 {
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .visitka {
+            height: 450px;
+            width: 700px;
+            border: 1px solid black;
+            font-size: 40px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        input {
+            width: 100px;
+        }
+        select {
+            width: 100px;
+        }
+        .fon {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            margin: 10px;
+            border-radius: 10px;
+            /* padding: 15px; */
+            background-color: lights;
+        }
+        .txt {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Make your business card!</h1>
+    <form action="" id="card">
+        <table>
+            <tr>
+                <td> <label for="name">Main text</label></td>
+                <td><input type="text" name="name" id="name" placeholder="the main line" onchange="getInputName()"></td>
+            </tr>
+            <tr>
+                <td><label for="additional">Additional text</label></td>
+                <td><input type="text" id="additional" placeholder="additional info" name="secondstroke" onchange="addText()"></td>
+            </tr>
+            <tr>
+                <td><label for="bg">Choose background</label></td>
+                <td> <select name="backgrounf" id="bg" onchange="changeBg()">
+                    <option value="mountain">Горы</option>
+                    <option value="cat">Котик</option>
+                    <option value="nature">Природа</option>
+                </select></td>
+            </tr>
+        </table>
+    </form>
+    <div class="visitka">
+        <div class="fon">
+            <p></p>
+            <p class="txt"></p>
+        </div>
+    </div>
+    <script>
+        let nameInForm = document.body.firstElementChild.nextElementSibling.lastElementChild.lastElementChild.firstElementChild.lastElementChild.firstElementChild
+        // document.getElementById('name'); 
+        let card = document.body.lastElementChild.previousElementSibling;
+        let texti = document.body.firstElementChild.nextElementSibling.lastElementChild.firstElementChild.firstElementChild.nextElementSibling.lastElementChild.firstElementChild;
+        let selections = document.body.firstElementChild.nextElementSibling.lastElementChild.lastElementChild.lastElementChild.lastElementChild.firstElementChild
+        // document.getElementById('bg');
+        let form = document.forms.card;
+
+        form.onsubmit = function(event) {
+            event.preventDefault();
+        }
+
+        const getInputName = function() {
+                if (nameInForm) {
+                    let please = nameInForm.value;
+                    card.firstElementChild.firstElementChild.innerText = `${please}`;
+                    card.firstElementChild.firstElementChild.style.padding = '15px';
+                    if (selections.value == 'mountain') {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `white`;
+                } else if (selections.value == 'cat') {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `lightslategrey`;
+                } else if (selections.value == 'nature') {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `rosybrown`;
+                }
+                }
+                if (card.firstElementChild.firstElementChild.firstChild===null) {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `transparent`;
+                }
+        }
+        console.log(card.firstElementChild.lastElementChild.firstChild, )
+        const changeBg = function() {
+            if(selections.value == 'mountain') {
+                card.style.background = 'url(mountain.jpg) no-repeat center/cover';
+                card.firstElementChild.firstElementChild.style.backgroundColor = `white`;
+                card.firstElementChild.lastElementChild.style.backgroundColor = `white`; 
+                if (card.firstElementChild.lastElementChild.firstChild==null) {
+                    card.firstElementChild.lastElementChild.style.backgroundColor = `transparent`;
+                }
+                if (card.firstElementChild.firstElementChild.firstChild==null) {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `transparent`;
+                }
+            } else if (selections.value == 'cat') {
+                card.style.background = 'url(cat.jpg) no-repeat center/cover';
+                card.firstElementChild.firstElementChild.style.backgroundColor = `lightslategrey`;
+                card.firstElementChild.lastElementChild.style.backgroundColor = `lightslategrey`;
+                if (card.firstElementChild.lastElementChild.firstChild==null) {
+                    card.firstElementChild.lastElementChild.style.backgroundColor = `transparent`;
+                }
+                if (card.firstElementChild.firstElementChild.firstChild==null) {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `transparent`;
+                }
+            } else {
+                card.style.background = 'url(nature.jpg) no-repeat center/cover';
+                card.firstElementChild.firstElementChild.style.backgroundColor = `rosybrown`;
+                card.firstElementChild.lastElementChild.style.backgroundColor = `rosybrown`;
+                if (card.firstElementChild.lastElementChild.firstChild==null) {
+                    card.firstElementChild.lastElementChild.style.backgroundColor = `transparent`;
+                }
+                if (card.firstElementChild.firstElementChild.firstChild==null) {
+                    card.firstElementChild.firstElementChild.style.backgroundColor = `transparent`;
+                }
+            }
+        }
+
+        const addText = function() {
+            if (texti) {
+                    let good = texti.value;
+                    card.firstElementChild.lastElementChild.innerText = `${good}`;
+                    card.firstElementChild.lastElementChild.style.padding = '15px';
+                    if (selections.value == 'mountain') {
+                        card.firstElementChild.lastElementChild.style.backgroundColor = `white`; 
+                    } else if (selections.value == 'cat') {
+                        card.firstElementChild.lastElementChild.style.backgroundColor = `lightslategrey`;
+                    } else if (selections.value == 'nature') {
+                        card.firstElementChild.lastElementChild.style.backgroundColor = `rosybrown`;
+                    }
+            }
+            if (card.firstElementChild.lastElementChild.firstChild===null) {
+                    card.firstElementChild.lastElementChild.style.backgroundColor = `transparent`;
+                }
+        }
+
+    </script>
+</body>
+</html>

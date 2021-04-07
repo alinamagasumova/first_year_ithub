@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 900px;
+            font: 20px sans-serif;
+            padding: 30px 0;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .caption {
+            border: 1px solid lightsalmon;
+            background-image: linear-gradient(to bottom, lightsalmon, lightpink 40%, lightpink 60%, lightsalmon);
+            padding: 5px 20px;
+            border-radius: 10px;
+        }
+        .text {
+            padding: 0 21px;
+            height: 0;
+            overflow: hidden;
+            transition-duration: 700ms;
+        }
+        .caption.active+.text{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Collapsible List</h1>
+    <div class="box">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos corporis laborum nemo inventore, ab est vitae ut, provident eaque facere optio aspernatur. Dolores quaerat beatae suscipit aut ipsam. Sed, iusto.</div>
+        <div class="caption">Iste atque temporibus laboriosam molestiae optio incidunt.</div>
+        <div class="text">Modi est aperiam nostrum distinctio! Vero quidem, iure dolorem in at obcaecati illum voluptatum eos totam sunt necessitatibus magni iste quas praesentium cupiditate saepe! Expedita alias repellat voluptatibus eligendi ipsa.</div>
+        <div class="caption">Reiciendis et rerum aliquid quas enim modi.</div>
+        <div class="text">Modi quis, fugiat cumque doloremque facilis ratione laborum soluta suscipit hic quaerat. Quibusdam commodi velit deserunt soluta incidunt ducimus nihil esse minus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti praesentium ea nulla nobis sunt exercitationem ullam, natus amet aspernatur dolor doloremque, quae quis. Quisquam modi unde fugiat expedita, ut, ipsa ipsum asperiores quasi mollitia aliquid distinctio! Dignissimos minima, nisi animi magnam eaque possimus quis. Quisquam eligendi, architecto, veniam perspiciatis praesentium fugiat dolor quidem neque, labore corrupti animi et beatae omnis! Illo, doloribus accusantium quos ipsa consectetur incidunt voluptatum quibusdam reiciendis blanditiis repellendus magni eum voluptates minus ad officia. Quis dignissimos error impedit nam laborum est atque obcaecati magni provident recusandae iusto, nihil mollitia earum nemo pariatur itaque omnis fuga molestiae. consequuntur facilis exercitationem unde veritatis, sequi saepe consectetur.</div>
+        <div class="caption">Repellendus mollitia natus ea! Consequuntur, ipsam? Omnis?</div>
+        <div class="text">Quis sed, modi voluptatum commodi perferendis culpa, repudiandae aliquid explicabo sint enim tempore veritatis placeat in maiores vitae, omnis hic. Dolorem libero sapiente iure! Suscipit dolorem quos officia voluptates veniam!</div>
+        <div class="caption">Ratione iure accusantium amet quaerat facere dignissimos.</div>
+        <div class="text">Facilis reiciendis nam tempore nisi voluptatem, quis deleniti harum nihil molestiae ea magnam fuga placeat, at asperiores! Non corrupti temporibus aspernatur in placeat ipsa facere repellendus, mollitia reiciendis quis vitae.</div>
+    </div>
+    <script>
+        let items = document.getElementsByClassName('caption');
+        items = Array.from(items);
+        items.forEach(item => {
+            // classList - список всех классов элемента в виде массива
+            // Методы: .add('class') .remove('class') .toggle('class') - добавляет если нет и удаляет если есть .contains('class') - проверяет наличие класса в теге
+            item.onclick = (e) => {
+                e.target.classList.toggle('active');
+                let bro = e.target.nextElementSibling;
+                if (e.target.classList.contains('active')) {
+                    bro.style.height = bro.scrollHeight + "px";
+                } else {
+                    bro.style.height = 0 + 'px';
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>

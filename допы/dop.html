@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2014_logo.svg/600px-Netflix_2014_logo.svg.png" alt="logo">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="">Главная</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Конфетки</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+
+    <main>
+        <div class="main-img">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/579c4f99-246d-4c3e-b401-419cda21a507/600x900" alt="Raya">
+        </div>
+
+
+        <div class="main-text">
+            <h1>Райя и последний дракон</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Информация</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Режиссер
+                    </td>
+                    <td>
+                        Дон Холл, Карлос Лопес Эстрада, Пол Бриггс
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>
+                        Жанр
+                    </td>
+                    <td>
+                        Мультфильм, фентези, боевик, комедия, приключения, семейный
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>
+                        Премьера в России
+                    </td>
+                    <td>
+                        4 марта 2021 год
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Кассовый сбор
+                    </td>
+                    <td>
+                        0$
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Время
+                    </td>
+                    <td>
+                        114 мин. / 01:54
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">США, 2021</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+        <video controls>
+            <source src="file.ogg" type="video/ogg">
+            <source src="https://kino-teatr.ua/public/main/films/trailer_19456.mp4" type="video/mp4">
+            <track src="file_ru.vtt" srclang="ru">
+            <track src="file_en.vtt" srclang="en">
+        </video>
+
+
+        <hr>
+        <nav class="targets">
+            <a href="about.html" target="info">Описание</a>
+            <a href="video.html" target="info">Другие трейлеры</a>
+            <a href="reviews.html" target="info">Рецензии</a>
+        </nav>
+        <iframe src="about.html" height="400" width="70%" name="info"></iframe>
+    </main>
+
+
+    <figure>
+        <picture>
+            <source srcset="https://images.wallpapersden.com/image/download/raya-and-the-last-dragon-2020-movie_a25naWmUmZqaraWkpJRmZmpnrW1raQ.jpg" media="(max-width:500px)">
+            <source srcset="https://prikolnostey.net/uploads/posts/2021-02/1612882672_8daf601c49e62a32_848x477-2.jpg" media="(max-width:1000px)">
+            <source srcset="https://total3d.ru/media/2020/10/raya-4.jpg" media="(min-width:1001px)">
+            <img>
+        </picture>
+        <figcaption>Райя и последний дракон</figcaption>
+    </figure>
+
+
+    <section>
+        <h2>Отзывы</h2>
+        <article>
+            <header class="revH">★★★★★</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore et cum veniam deserunt corporis praesentium architecto laborum est magni.</p>
+            <footer class="revF">04.03.2021</footer>
+        </article>
+        <article>
+            <header class="revH">★★★★★★★★☆☆</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore et cum veniam deserunt corporis praesentium architecto laborum est magni.</p>
+            <footer class="revF">06.03.2021</footer>
+        </article>
+        <article class="super-right">
+            <header class="revH">★★★★☆☆☆☆☆☆</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore et cum veniam deserunt corporis praesentium architecto laborum est magni.</p>
+            <footer class="revF">06.03.2021</footer>
+        </article>
+        <article>
+            <header class="revH">★★☆☆☆☆☆☆☆☆</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore et cum veniam deserunt corporis praesentium architecto laborum est magni.</p>
+            <footer class="revF">04.03.2021</footer>
+        </article>
+        <article>
+            <header class="revH">★★★★★☆☆☆☆☆</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea labore et cum veniam deserunt corporis praesentium architecto laborum est magni.</p>
+            <footer class="revF">02.03.2021</footer>
+        </article>
+
+
+        <form action="path/file.php" method="post">
+            <fieldset>
+            <legend>Оставить отзыв</legend>
+            <label for="inp1">Введите имя</label>
+            <input type="text" id="inp1" name="user"><br>
+            <label for="inp2">Выберите оценку</label>
+            <input type='text' name="rating" list="inp3" id="inp2">
+            <datalist id="inp3">
+                <option value="5">Отлично</option>
+                <option value="4">Хорошо</option>
+                <option value="3">Сойдет</option>
+                <option value="2">Плохо</option>
+                <option value="1">Ужасно</option>
+            </datalist><br>
+            <textarea placeholder="Ваш отзыв" cols="30" rows="10"></textarea>
+            <button type="submit">Отправить отзыв</button>
+            </fieldset>
+            <!-- <input type="submit" value="Отправить отзыв"> -->
+        </form>
+    </section>
+
+
+    <footer id="main-footer">&copy;IThub 2021</footer>
+</body>
+</html>

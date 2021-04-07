@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .card {
+            margin: 0 auto;
+            width: 300px;
+            height: 150px;
+            background: darkorchid;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .pic {
+            height: 70px;
+            color: whitesmoke;
+        }
+        .name {
+            text-align: center;
+            font: 600 20px sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="smile-wink-regular.svg" alt="picture" class="pic">
+        <span class="name">text</span>
+    </div>
+
+    <script>
+
+        let images = [
+            {name: 'wink', path: 'smile-wink-regular.svg'},
+            {name: 'dizzy', path: 'dizzy-regular.svg'},
+            {name: 'angry', path: 'angry-regular.svg'}
+        ];
+
+        let pic = document.body.firstElementChild.firstElementChild;
+        let text = document.body.firstElementChild.lastElementChild;
+        let select = document.createElement('select');
+        for (let img of images) {
+            let opt = new Option(img.name, img.path);
+            select.appendChild(opt);
+        }
+        document.body.appendChild(select);
+
+        select.onchange = function(e) {
+            pic.scr = this.value;
+        }
+        console.log(pic) 
+
+    </script>
+</body>
+</html>

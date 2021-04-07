@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choosing teams</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(206, 210, 223);
+            font: 20px sans-serif;
+        }
+        .teams {
+            display: flex;
+            /* height: 100vh; */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        h1 {
+            text-align: center;
+            /* margin: 0; */
+        }
+        .team {
+            height: 300px;
+            width: 280px;
+            background-color: rgb(214, 172, 172);
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: center;
+            line-height: 2;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teams</h1>
+    <div class="teams">
+        <!-- <div class="team"></div>
+        <div class="team"></div>
+        <div class="team"></div>
+        <div class="team"></div>
+        <div class="team"></div>
+        <div class="team"></div>
+        <div class="team"></div> -->
+    </div>
+    <script>
+        const group = [
+            "Анофриев Иван",
+            "Асатрян Эдуард",
+            "Безусов Павел",
+            "Бельский Дмитрий",
+            "Бодачёва Яна",
+            "Ломинский Тимофей",
+            "Тимонин Игорь",
+            "Магасумова Алина",
+            "Дрей Софья",
+            "Шаповалов Иван",
+            "Гриневич Александр",
+            "Потемкин Георгий",
+            "Мирончук Дмитрий",
+            "Якушева Софья",
+            "Дудукалов Марк",
+            "Павлова Мария",
+            "Федорков Михаил",
+            "Попов Леонид",
+            "Грачев Никита",
+            "Василов Шамиль",
+            "Коновалов Павел",
+        ];
+        group.sort(() => Math.random() - 0.5);
+        let team = [];
+        let teams = [];
+        let cnt = Math.floor(group.length / 3);
+        for (let i = 0; i < group.length; i++) {
+            if (i%3 === 0) {
+                if (i !== 0) {
+                teams.push(team);
+                };
+                team = [];
+                team.push(group[i]);
+            } else {
+                team.push(group[i]);
+            }
+        };
+        teams.push(team);
+        let main = document.body.firstElementChild.nextElementSibling;
+        teams.forEach(t => {
+            let card = document.createElement("div");
+            card.className = "team";
+            for (let i = 0; i < t.length; i++) {
+                card.innerHTML += `<div>${t[i]}</div>`;
+            };
+            main.appendChild(card);
+        });
+    </script>
+</body>
+</html>

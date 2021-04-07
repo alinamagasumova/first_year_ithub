@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lab</title> 
+    <style> 
+        body { 
+        margin: 0 auto; 
+        padding: 20px 80px; 
+        max-height: 100vh; 
+        font: 20px sans-serif; 
+        } 
+        h1 { 
+        margin: 0 0 30px; 
+        text-align: center; 
+        } 
+        ul { 
+        margin: 0; 
+        padding: 0;
+        } 
+        li {
+            list-style: none;
+        }
+        .dsp {
+            display: none;
+        }
+        .box { 
+            height: 50px; 
+            width: 300px; 
+            background-color: rgb(192, 111, 64); 
+            margin: 10px; 
+            padding: 15px 10px; 
+            box-sizing: border-box; 
+        } 
+        .second {
+            margin-left: 60px;
+            background-color: rgb(230, 149, 102);
+        }
+        .second::before {
+            content: "+";
+            position: absolute;
+            left: 120px;
+        }
+        .third {
+            margin-left: 100px;
+        }
+        .bgc {
+            background-color: rgb(260, 179, 132);
+        }
+        .plus::before {
+            content: "+";
+            position: absolute;
+            left: 65px;
+        }
+        .minus::before {
+            content: "-";
+            position: absolute;
+            left: 65px;
+        }
+        .minussec::before {
+            content: "-";
+            position: absolute;
+            left: 120px;
+        }
+        .active {
+            display: block;
+        }
+    </style> 
+</head> 
+<body> 
+    <h1>Catalog</h1> 
+
+    <p class="box plus" id="book">Books</p> 
+    <ul class="dsp books"> 
+
+    <li class="box second" id="booksfav">My favourites</li> 
+    <ul class="booksfavop dsp third">
+        <li class="box bgc">one</li>
+        <li class="box bgc">two</li>
+    </ul>
+
+    <li class="box second" id="booksso">So-so</li> 
+    <ul class="bookssoop dsp third">
+        <li class="box bgc">one</li>
+        <li class="box bgc">two</li>
+    </ul>
+    </ul> 
+    
+    <p class="box plus" id="dvd">DVD</p> 
+    <ul class="dsp dvds"> 
+
+    <li class="box second" id="dvdfav">My favourites</li> 
+    <ul class="dsp third dvdfavop">
+        <li class="box bgc">one</li>
+        <li class="box bgc">two</li>
+    </ul>
+
+    <li class="box second" id="dvdso">So-so</li> 
+    <ul class="dsp third dvdsoop">
+        <li class="box bgc">one</li>
+        <li class="box bgc">two</li>
+    </ul>
+    </ul> 
+
+<script> 
+    const book = document.getElementById('book'); const dvd = document.getElementById('dvd'); const dvdfav = document.getElementById('dvdfav'); const dvdso = document.getElementById('dvdso'); const booksfav = document.getElementById('booksfav'); const booksso = document.getElementById('booksso');
+    let dvds = document.getElementsByClassName('dvds'); dvds = Array.from(dvds);
+    let books = document.getElementsByClassName('books'); books = Array.from(books);
+    let dvdfavop = document.getElementsByClassName('dvdfavop'); dvdfavop = Array.from(dvdfavop); 
+    let dvdsoop = document.getElementsByClassName('dvdsoop'); dvdsoop = Array.from(dvdsoop); 
+    let bookssoop = document.getElementsByClassName('bookssoop'); bookssoop = Array.from(bookssoop); 
+    let booksfavop = document.getElementsByClassName('booksfavop'); booksfavop = Array.from(booksfavop); 
+
+
+    dvd.onclick = (e) => {
+        e.target.classList.toggle('minus');
+        dvds.forEach(dvdo => {
+            dvdo.classList.toggle('active');
+        });
+    }
+    book.onclick = (e) => {
+        e.target.classList.toggle('minus');
+        books.forEach(booko => {
+            booko.classList.toggle('active');
+        });
+    }
+
+    dvdfav.onclick = (e) => {
+        e.target.classList.toggle('minussec');
+        dvdfavop.forEach(dvdo => {
+            dvdo.classList.toggle('active');
+        });
+    }
+    dvdso.onclick = (e) => {
+        e.target.classList.toggle('minussec');
+        dvdsoop.forEach(dvdo => {
+            dvdo.classList.toggle('active');
+        });
+    }
+
+    booksso.onclick = (e) => {
+        e.target.classList.toggle('minussec');
+        bookssoop.forEach(bookso => {
+            bookso.classList.toggle('active');
+        });
+    }
+    booksfav.onclick = (e) => {
+        e.target.classList.toggle('minussec');
+        booksfavop.forEach(bookso => {
+            bookso.classList.toggle('active');
+        });
+    }
+
+</script> 
+</body> 
+</html>

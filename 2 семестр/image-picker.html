@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-picker</title>
+    <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .preview {
+        width: 800px;
+        height: 500px;
+        margin-bottom: 20px;
+        border: 1px solid;
+        border-radius: 20px;
+    }
+    .images {
+        width: 800px;
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: 50px;
+        gap: 20px;
+    }
+    .image-item {
+        border: 1px solid;
+        border-radius: .5em;
+    }
+    </style>
+</head>
+<body>
+    <div class="preview" id="box"></div>
+    <div class="images">
+        <div class="image-item" style="background: url(https://pixel-trade.ru/image/cache/catalog/nout-2000x2000.jpg) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(https://webstockreview.net/images/clipart-phone-clear-background-phone-4.png) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(http://www.riskmanagementmonitor.com/wp-content/uploads/2014/12/Laptop1.jpg) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(https://im0-tub-ru.yandex.net/i?id=8910762fe674d1688076eae96cdffb84&ref=rim&n=33&w=400&h=300) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(https://c.wallhere.com/photos/ce/1c/chromebooks_2016_asus_c300m-563569.jpg!d) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(https://m.chodo.ru/userfiles/images/photogalleries/5072_1/1484047501_apple_mlmx2ll_a_9_7_ipad_pro_128gb_1241267.jpg) no-repeat center/contain;"></div>
+        <div class="image-item" style="background: url(https://cdn.pixabay.com/photo/2017/07/06/00/44/phone-2476595__340.png) no-repeat center/contain;"></div>
+    </div>
+    <script>
+    const viewBox = document.getElementById("box"),
+    items = document.getElementsByClassName("image-item");
+
+    for(let it of items) {
+        // .getAttribute("название атрибута") - получить значение атрибута;
+        let currentImage = it.getAttribute("style");
+        console.log(currentImage)
+        it.onclick = () => {
+            viewBox.setAttribute("style", `${currentImage}`);
+        }
+        viewBox.setAttribute("style", `${items[0].getAttribute("style")}`);
+    }
+    </script>
+</body>
+</html>

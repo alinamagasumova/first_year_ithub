@@ -11,44 +11,82 @@
             font-size: 20px;
         }
     </style>
+    <script src="functions.js"></script>
 </head>
 <body>
     <form action="" id="rating">
-        <input type="text" name="name" placeholder="Enter name"><br>
+        <label for="name">Your first name</label><br>
+        <input type="text" name="name" placeholder="Enter name" id="name"><br>
         <label for="fav">Favourite subject</label><br>
         <select name="favourite" id="fav">
-            <!-- onchange="getInfo();" -->
+            <!-- onchange="getInfo();"   onclick="getFormBody()"   -->
             <option value="Algebra">Algebra</option>
             <option value="Programming">Programming</option>
             <option value="PE">PE</option>
-        </select>
-        <input type="button" value="Click" onclick="getFormBody()">
+        </select><br>
+        <input type="submit" value="Click">
     </form>
+    <a href="">Colorchanger</a>
     <script>
         let form = document.forms.rating;
-        function getInfo() {
-            for (let i = 0; i < form.elements.length; i++) {
-                if (i !== form.elements.length - 1) {
-                    console.log(form.elements[i].value)
-                }
-                // if (form.elements[i].type) {
-                //     console.log(form.elements[i].type);
-                // } else {
-                //     console.log(form.elements[i].value);
-                // }
-            }
-        }
-        // 2) Выгрузить в блок под форму
-        const getFormBody = function() {
+        form.onsubmit = function(event) {
+            event.preventDefault();
             let formBody = {};
             for (let i = 0; i < form.elements.length; i++) {
                 let el = form.elements[i];
                 if (el.name) {
-                    formBody[el.name] = el.value;
+                    formBody[el.name] = el.value || "Пустота...";
+
                 }
             }
             console.log(formBody);
+
+            let info = document.createElement('div');
+            info.innerText = `${formBody.name} : ${formBody.favourite}`;
+            info.className = 'line';
+            // document.body.insertBefore(info, form);
+            form.parentNode.insertBefore(info,form)
         }
+
+        let link = form.nextElementSibling;
+        link.onclick = function(event) {
+            event.preventDefault(); // отменить действие по умолчанию
+            this.style.color = getRGB();
+        }
+
+        var s = document.getElementById('fav');
+        var options = [ 'Russian', 'Literature'];
+
+        options.forEach(function(element, key) {
+        if (element == 'Russian') {
+            s[s.options.length] = new Option(element, s.options.length);
+        }
+        if (element == 'Literature') {
+            s[s.options.length] = new Option(element, s.options.length);
+        }
+        });
+
+        // function getInfo() {
+        //     for (let i = 0; i < form.elements.length; i++) {
+        //         if (i !== form.elements.length - 1) {
+        //             console.log(form.elements[i].value)
+        //         }
+        //     }
+        // }
+
+        // const getFormBody = function() {
+        //     let formBody = {};
+        //     for (let i = 0; i < form.elements.length; i++) {
+        //         let el = form.elements[i];
+        //         if (el.name) {
+        //             formBody[el.name] = el.value;
+
+        //         }
+        //     }
+        //     console.log(formBody);
+        // }
+
+
     </script>
 </body>
 </html>
